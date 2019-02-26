@@ -1,0 +1,103 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/persons
+Accept: application/json
+
+###
+
+GET http://localhost:8080/addresses
+Accept: application/json
+
+###
+
+GET http://localhost:8080/
+Accept: application/json
+
+###
+
+POST http://localhost:8080/addresses
+Content-Type: application/json
+
+{"office" : "3.20", "building" :  "EPS"}
+
+###
+
+GET http://localhost:8080/addresses/1
+Accept: application/json
+
+###
+
+POST http://localhost:8080/persons
+Content-Type: application/json
+
+{"name" :  "Juan Manuel"}
+
+###
+
+GET http://localhost:8080/persons/2
+Accept: application/json
+
+###
+
+GET http://localhost:8080/persons/2/address
+Accept: application/json
+
+###
+
+GET http://localhost:8080/addresses/1/person
+Accept: application/json
+
+###
+
+PUT http://localhost:8080/persons/2/address
+Content-Type: text/uri-list
+
+http://localhost:8080/addresses/1
+
+###
+
+GET http://localhost:8080/persons/2/address
+Accept: application/json
+
+###
+
+GET http://localhost:8080/addresses/1/person
+Accept: application/json
+
+###
+
+POST http://localhost:8080/addresses
+Content-Type: application/json
+
+{"office" :  "3.15", "building" :  "EPS"}
+
+###
+
+POST http://localhost:8080/persons
+Content-Type: application/json
+
+{"name" :  "Roberto"}
+
+###
+
+PUT http://localhost:8080/addresses/3/person
+Content-Type: text/uri-list
+
+http://localhost:8080/persons/4
+
+###
+
+GET http://localhost:8080/persons/4/address
+Accept: application/json
+
+###
+
+GET http://localhost:8080/addresses/3/person
+Accept: application/json
+
+###
