@@ -16,9 +16,6 @@ public class Address {
     private String building;
     private String office;
 
-    @OneToOne(mappedBy = "address")
-    private Person person;
-
     public Address() {
     }
 
@@ -41,14 +38,6 @@ public class Address {
 
     public void setOffice(String office) {
         this.office = office;
-    }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
     }
 
     @Override
