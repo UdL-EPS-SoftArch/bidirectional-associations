@@ -3,6 +3,7 @@ package cat.udl.eps.entsoftarch.bidirectionalassociations.domain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.util.Objects;
 
 @Entity
@@ -13,6 +14,9 @@ public class Person {
     private Long id;
 
     private String name;
+
+    @OneToOne
+    private Address address;
 
     public Person() {
     }
@@ -27,6 +31,14 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override
